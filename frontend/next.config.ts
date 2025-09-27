@@ -13,27 +13,29 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "placehold.co",
-        port: "",
         pathname: "/**",
       },
       {
         protocol: "https",
         hostname: "images.unsplash.com",
-        port: "",
         pathname: "/**",
       },
       {
         protocol: "https",
         hostname: "picsum.photos",
-        port: "",
         pathname: "/**",
       },
     ],
   },
 
+  // 👇 Force correct root for Next.js (important for Vercel builds)
+  experimental: {
+    turbo: {
+      root: path.join(__dirname),
+    },
+  },
 
-
-  // 👇 This avoids "require.extensions" warnings from handlebars/genkit
+  // 👇 Avoid "require.extensions" warnings
   webpack: (config) => {
     config.resolve.fallback = { fs: false };
     return config;
