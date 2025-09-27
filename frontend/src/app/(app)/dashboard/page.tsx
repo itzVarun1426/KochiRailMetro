@@ -46,7 +46,7 @@ function DashboardContent() {
         </div>
       )}
 
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
         {loading ? (
           Array.from({ length: 6 }).map((_, i) => (
             <Skeleton key={i} className="h-32 w-full" />
@@ -67,9 +67,7 @@ function DashboardContent() {
         </div>
       </div>
       
-      <div className="grid gap-4 grid-cols-1">
-        <PredictiveAlerts />
-      </div>
+     
       
       {/* Temporary API Test Component */}
       <div className="mt-8">
