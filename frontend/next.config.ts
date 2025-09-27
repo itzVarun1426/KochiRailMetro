@@ -31,8 +31,7 @@ const nextConfig: NextConfig = {
     ],
   },
 
-  // 👇 This makes sure Next.js uses "frontend/" as root
-  outputFileTracingRoot: path.join(__dirname),
+
 
   // 👇 This avoids "require.extensions" warnings from handlebars/genkit
   webpack: (config) => {
